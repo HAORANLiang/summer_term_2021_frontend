@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import {getresult} from "../api/api";
+import {postParams} from "../api/api";
 
 export default {
   name: "plus",
@@ -22,9 +22,9 @@ export default {
     submitForm:function (){
       console.log(this.$refs.first.value)
       console.log(this.$refs.second.value)
-      getresult(this.$refs.first.value,this.$refs.second.value).then((res)=>{
+      postParams(this.$refs.first.value,this.$refs.second.value).then((res)=>{
         console.log(res.data)
-        this.$refs.result.value=res.data.answer
+        this.$refs.result.value=res.data
       })
       this.$refs.result.value='test';
       console.log(this.$refs.result)
