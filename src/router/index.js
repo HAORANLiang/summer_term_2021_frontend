@@ -31,6 +31,13 @@ const constRoutes = [
         meta: {
             title: 'UNIT'
         }
+    },
+    {
+        path: '/multiply',
+        component: () => import('@/views/Multiply'),
+        meta: {
+            title: 'Multiply'
+        }
     }
 ]
 
