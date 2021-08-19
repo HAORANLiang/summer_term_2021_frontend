@@ -5,6 +5,13 @@ Vue.use(VueRouter)
 
 const constRoutes = [
     {
+        path: '/division',
+        component: () => import('@/views/division/index'),
+        meta: {
+            title: 'DIVISION',
+        }
+    },
+    {
         path: '/home',
         component: () => import('@/views/home/index'),
         meta: {
