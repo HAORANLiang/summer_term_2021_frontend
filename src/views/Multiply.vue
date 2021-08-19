@@ -31,7 +31,7 @@ export default {
     calculate() {
       axios({
         method: 'get',
-        url: 'http://101.200.150.87/api/multiply',
+        url: 'http://101.200.150.87:8000/multiply',
         params: {
           first: this.first,
           second: this.second

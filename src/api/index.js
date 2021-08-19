@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Axios from 'axios'
 
 const axiosInstance = Axios.create({
-    withCredentials: true
+    // withCredentials: true,       不能配置，服务器设置了cors
+    baseURL: 'http://101.200.150.87:8000'
 })
 
 // 通过拦截器处理csrf问题，这里的正则和匹配下标可能需要根据实际情况小改动

@@ -5,13 +5,6 @@ Vue.use(VueRouter)
 
 const constRoutes = [
     {
-        path: '/division',
-        component: () => import('@/views/division/index'),
-        meta: {
-            title: 'DIVISION',
-        }
-    },
-    {
         path: '/home',
         component: () => import('@/views/home/index'),
         meta: {
@@ -44,6 +37,27 @@ const constRoutes = [
         component: () => import('@/views/Multiply'),
         meta: {
             title: 'Multiply'
+        }
+    },
+    {
+        path: '/division',
+        component: () => import('@/views/division/index'),
+        meta: {
+            title: 'DIVISION',
+        }
+    },
+    {
+        path: '/jian',
+        component: () => import('@/views/jian'),
+        meta: {
+            title: 'JIAN',
+        }
+    },
+    {
+        path: '/plus',
+        component: () => import('@/views/plus'),
+        meta: {
+            title: 'PLUS',
         }
     }
 ]

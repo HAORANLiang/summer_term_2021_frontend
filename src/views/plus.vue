@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import {postParams} from "../api/api";
 import axios from "axios";
 
 export default {
@@ -29,14 +28,19 @@ export default {
       // })
       axios({
         method:'get',
-        url:'http://101.200.150.87/plus',
+        url:'http://101.200.150.87:8000/plus',
+        // value!!
         params:{
-          first:this.$refs.first,
-          second:this.$refs.second
+          first:this.$refs.first.value,
+          second:this.$refs.second.value,
         }
       }).then(response =>{
-        this.$refs.answer=response.data.answer
-      })
+        console.log('hhh')
+        // value!!!
+        this.$refs.answer.value=response.data.answer
+      },
+      err => console.log(err.message)
+      )
       // this.$refs.result.value='test';
       console.log(this.$refs.answer.value)
     }

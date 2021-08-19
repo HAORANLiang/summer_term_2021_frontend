@@ -24,13 +24,13 @@ export default {
 
       axios({
         method: 'GET',
-        url: 'http://101.200.150.87/api/',
+        url: 'http://101.200.150.87:8000/division',
         params: {
           first: parseInt(this.first),
           second: parseInt(this.second)
         }
       }).then(
-          res => this.answer = res.data,
+          res => this.answer = res.data.answer,
           err => {
             this.$notify.error({
               title: '错误',

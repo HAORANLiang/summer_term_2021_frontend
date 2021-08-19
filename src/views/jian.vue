@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import {postNub} from '../api/api.js'
+    import {postNub} from '@/api/api'
     export default {
         name: "jian",
         data(){
@@ -29,7 +29,9 @@
               postNub(this.nub1, this.nub2).then(response => {
                 console.log(response)
                 this.nub3 = response.data['answer']
-              })
+              },
+                  err => console.log('err', err.message)
+              )
             },
         }
     }
