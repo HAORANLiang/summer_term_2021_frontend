@@ -26,8 +26,8 @@ export default {
         console.log(res.data)
         this.$refs.result.value=res.data
       })
-      this.$refs.result.value='test';
-      console.log(this.$refs.result)
+      // this.$refs.result.value='test';
+      console.log(this.$refs.result.value)
     }
   },
   mounted() {
