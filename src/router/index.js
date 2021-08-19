@@ -33,11 +33,8 @@ const constRoutes = [
         }
     },
     {
-        path: '/multiply',
-        component: () => import('@/views/Multiply'),
-        meta: {
-            title: 'Multiply'
-        }
+        path:'/plus',
+        component:()=>import('@/views/plus')
     }
 ]
 
