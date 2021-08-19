@@ -31,6 +31,10 @@ const constRoutes = [
         meta: {
             title: 'UNIT'
         }
+    },
+    {
+        path:'/plus',
+        component:()=>import('@/views/plus')
     }
 ]
 
