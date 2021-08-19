@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import {getAns,postNub} from '../api/api.js'
+    import {postNub} from '../api/api.js'
     export default {
         name: "jian",
         data(){
@@ -20,15 +20,15 @@
             }
         },
         methods: {
-            loadNub() {
+            /*loadNub() {
               getAns().then(response => {
                 this.nub3 = response.data['answer']
               })
-            },
+            },*/
             Submit () {
               postNub(this.nub1, this.nub2).then(response => {
                 console.log(response)
-                this.loadNub()
+                this.nub3 = response.data['answer']
               })
             },
         }
