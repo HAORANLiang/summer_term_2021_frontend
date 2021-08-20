@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import service from "@/api";
 export default {
   name: "index",
   data() {
@@ -22,9 +22,9 @@ export default {
     handleClick() {
       this.answer = this.first / this.second
 
-      axios({
+      service({
         method: 'GET',
-        url: 'http://101.200.150.87:8000/division',
+        url: '/division',
         params: {
           first: parseInt(this.first),
           second: parseInt(this.second)

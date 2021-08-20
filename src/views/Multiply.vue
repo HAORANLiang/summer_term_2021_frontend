@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import service from "@/api";
 export default {
   name: "multiply",
   data () {
@@ -29,9 +29,9 @@ export default {
   },
   methods: {
     calculate() {
-      axios({
+      service({
         method: 'get',
-        url: 'http://101.200.150.87:8000/multiply',
+        url: '/multiply',
         params: {
           first: this.first,
           second: this.second

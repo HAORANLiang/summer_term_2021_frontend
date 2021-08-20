@@ -1,9 +1,5 @@
 
-import axiosInstance from './index'
-
-const service = axiosInstance
-
-
+import service from './index'
 
 export const postNub = (first, second) => {
     // console.log('@', first, second)

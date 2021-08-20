@@ -10,8 +10,7 @@
 </template>
 
 <script>
-import axios from "axios";
-
+import service from "@/api";
 export default {
   name: "plus",
   data(){
@@ -26,9 +25,9 @@ export default {
       //   console.log(res.data)
       //   this.$refs.result.value=res.data
       // })
-      axios({
+      service({
         method:'get',
-        url:'http://101.200.150.87:8000/plus',
+        url:'/plus',
         // value!!
         params:{
           first:this.$refs.first.value,
